@@ -26,10 +26,10 @@ default_args = {
 schedule_interval = '*/15 * * * *'
 
 # создание бота
-my_token = '6676234776:AAEddY0hx3lrbtLvMBxU1t6ke6qIN3zVIYc'
+my_token = '*****'
 bot = telegram.Bot(token=my_token)
-chat_id = 271311667
-#-938659451
+chat_id = *****
+
 
 # info = bot.getUpdates()
 # print(info[-1])
@@ -37,10 +37,10 @@ chat_id = 271311667
 # запрос в базу данных
 def ch_get_df (query):
     connection = {
-            'host': 'https://clickhouse.lab.karpov.courses',
-            'password': 'dpo_python_2020',
-            'user': 'student',
-            'database': 'simulator'}
+            'host': 'https://clickhouse....',
+            'password': '*****',
+            'user': '*****',
+            'database': '*****'}
     
     result = pandahouse.read_clickhouse(query, connection=connection)
     return result
@@ -80,7 +80,6 @@ def graph(df, x, y, title):
     # заголовок
     plt.title(title);
     send_graph()
-    #pdf_pages.savefig(plt.gcf())
     return
 
 
@@ -99,14 +98,14 @@ def n_abramkin_alert():
                 ROUND(count_likes / count_views, 3) AS CTR,
                 DAU_message, 
                 message_sent
-                FROM simulator_20230920.feed_actions AS fa
+                FROM feed_actions AS fa
                 JOIN 
                     (SELECT toStartOfFifteenMinutes(time) AS ts,
                     toDate(ts) AS date,
                     formatDateTime(ts, '%R') AS hm,
                     COUNT (DISTINCT user_id) AS DAU_message,
                     COUNT (user_id) AS message_sent
-                    FROM simulator_20230920.message_actions AS ma
+                    FROM message_actions AS ma
                     WHERE date BETWEEN today() -1 AND today()
                     GROUP BY ts, date, hm
                     ORDER BY ts) AS ma
@@ -117,7 +116,6 @@ def n_abramkin_alert():
                 ORDER BY ts
             """
         df = ch_get_df(query)
-        #df = pd.read_csv('test.csv')
 
         # расчет % отклонения
         def percent(column):
