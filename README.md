@@ -4,12 +4,21 @@
 
 ## Используемые инструменты:
 <div>
-  <img src="https://img.shields.io/badge/python-black?logo=python&style=for-the-badge" title="Python" alt="Python" height="35"/>&nbsp;
-  <img src="https://img.shields.io/badge/telegram-black?logo=telegram&style=for-the-badge" title="Telegram" alt="Telegram" height="35"/>&nbsp;
-  <img src="https://img.shields.io/badge/Airflow-black?logo=Airflow&style=for-the-badge" title="Airflow" alt="Airflow" height="40"/>&nbsp;
+  <img src="https://img.shields.io/badge/python-black?logo=python&style=for-the-badge" title="Python" alt="Python" height="40"/>&nbsp;
+  <img src="https://img.shields.io/badge/telegram-black?logo=telegram&style=for-the-badge" title="Telegram" alt="Telegram" height="40"/>&nbsp;
+  <img src="https://img.shields.io/badge/Apache Airflow-black?logo=Apache Airflow&style=for-the-badge" title="Apache Airflow" alt="Apache Airflow" height="40"/>&nbsp;
   <img src="https://img.shields.io/badge/github-black?logo=github&logoColor=white&style=for-the-badge" title="GitHub" alt="GitHub" height="40"/>&nbsp;
   <img src="https://img.shields.io/badge/clickhouse-black?logo=clickhouse&style=for-the-badge" title="clickhouse" alt="clickhouse" height="40"/>&nbsp;
 
+## Этапы работы:
+- Анализ требований и определение метрик;
+- Создание и настройка telegram бота;
+- Написание SQL запросов для сбора данных о ключевых метриках приложения;
+- Написание статистических методов для обнаружения аномалий;
+- Настройка Apache Airflow;
+- Тестирование;
+- Внедрение.
+  
 ## Результат: 
 ![IMG_6592](https://github.com/abramkin-n/alert-system/assets/142117817/22c756da-0096-4ce5-8fa8-618c8673ad4b)
 
